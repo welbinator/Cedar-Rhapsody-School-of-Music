@@ -16,7 +16,7 @@ class Custom_Customizer {
         $this->classes_section( $wp_customize );
 		$this->about_page( $wp_customize );
         $this->contact_page( $wp_customize );
-        // $this->piano_page( $wp_customize );
+        $this->digital_page( $wp_customize );
         // $this->drums_page( $wp_customize );
         $this->guitar_page( $wp_customize );
         $this->drums_page( $wp_customize );
@@ -598,6 +598,77 @@ class Custom_Customizer {
             'label' => 'second piano Tagline',
             'section' => 'piano-section',
             'settings' => 'second-piano-tagline',
+            'type' => 'textarea'
+        )));
+       
+    }
+    private function digital_page( $wp_customize ) {
+
+        $wp_customize->add_section('digital-section', array(
+            'title' => 'Digital Page',
+            'priority' => 1,
+            'description' => __('digital page content', 'doesthismatter'),
+        ));
+
+
+        $wp_customize->add_setting('digital-hero-heading', array(
+            'default' => '',
+            'sanitize_callback' => array($this, 'sanitize_custom_text')
+        ));
+        $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'digital-hero-heading-control', array(
+            'label' => 'digital hero Heading',
+            'section' => 'digital-section',
+            'settings' => 'digital-hero-heading',
+            'type' => 'textarea'
+        )));
+
+        $wp_customize->add_setting('digital-hero-paragraph', array(
+            'default' => '',
+            'sanitize_callback' => array($this, 'sanitize_custom_text')
+        ));
+        $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'digital-hero-paragraph-control', array(
+            'label' => 'digital hero Paragraph',
+            'section' => 'digital-section',
+            'settings' => 'digital-hero-paragraph',
+            'type' => 'textarea'
+        )));
+
+        $wp_customize->add_setting('digital-image', array(
+            'default' => '',
+            'type' => 'theme_mod',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback' => array($this, 'sanitize_custom_url')
+        ));
+
+        $wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize, 'digital-image-control', array(
+            'label' => 'Image',
+            'section' => 'digital-section',
+            'settings' => 'digital-image',
+            'width' => 3000,
+            'height' => 3000,
+            'flex_height' => true,
+            'flex_width'  => true,
+        )));
+
+        $wp_customize->add_setting('second-digital-heading', array(
+            'default' => '',
+            'sanitize_callback' => array($this, 'sanitize_custom_text')
+        ));
+        $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'second-digital-heading-control', array(
+            'label' => 'second digital Heading',
+            'section' => 'digital-section',
+            'settings' => 'second-digital-heading',
+            'type' => 'textarea'
+        )));
+
+        $wp_customize->add_setting('second-digital-tagline', array(
+            'default' => '',
+            'sanitize_callback' => array($this, 'sanitize_custom_text')
+        ));
+        $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'second-digital-tagline-control', array(
+            'label' => 'second digital Tagline',
+            'section' => 'digital-section',
+            'settings' => 'second-digital-tagline',
             'type' => 'textarea'
         )));
        
