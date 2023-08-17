@@ -38,7 +38,7 @@
                     <?php echo wpautop("<p> $heroParagraph </p>"); ?>
                 <?php } ?>
                     <div class="button-container">
-                    <button class="btn btn-primary fons-book">Request a FRE Consultation</button> 
+                    <button class="btn btn-primary fons-book">Request a FREE Consultation</button> 
 
 <!-- insert the scripts below before the closing body tag --> 
 
