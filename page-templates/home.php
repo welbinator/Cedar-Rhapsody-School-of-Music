@@ -39,7 +39,7 @@
                     <?php echo wpautop("<p> $heroParagraph </p>"); ?>
                 <?php } ?>
                     <div class="button-container">
-                    <button class="btn btn-primary fons-book">Request a FREE Consultation</button> 
+                    <button class="btn btn-primary fons-book">Request a FREE Consultation Yo!</button> 
 
 <!-- insert the scripts below before the closing body tag --> 
 
@@ -61,7 +61,7 @@
                 <?php
                 $firstHeading = get_theme_mod('first-heading');
                 if ($firstHeading != '') { ?>
-                    <?php echo wpautop("<h1 class='text-center text-lg-left mb-0 mt-4 mt-lg-0'><strong> Hello Yo $firstHeading </strong></h1>"); ?>
+                    <?php echo wpautop("<h1 class='text-center text-lg-left mb-0 mt-4 mt-lg-0'><strong>  $firstHeading </strong></h1>"); ?>
                 <?php } ?>
                   
                 <?php
