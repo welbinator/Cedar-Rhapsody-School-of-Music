@@ -3,6 +3,7 @@
 
 
 <div class="hero">
+
         <div class="hero-clipped-images-container">
            
             <div data-rate=".6" data-direction="vertical" data-aos="fade-up" data-aos-duration="500" class="scroll hero-image-div">
@@ -60,7 +61,7 @@
                 <?php
                 $firstHeading = get_theme_mod('first-heading');
                 if ($firstHeading != '') { ?>
-                    <?php echo wpautop("<h1 class='text-center text-lg-left mb-0 mt-4 mt-lg-0'><strong> $firstHeading </strong></h1>"); ?>
+                    <?php echo wpautop("<h1 class='text-center text-lg-left mb-0 mt-4 mt-lg-0'><strong> Hello Yo $firstHeading </strong></h1>"); ?>
                 <?php } ?>
                   
                 <?php
